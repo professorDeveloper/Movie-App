@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    app:startDestination="@id/homeScreen">
+
+    <fragment
+        android:id="@+id/homeScreen"
+        tools:layout="@layout/main_screen"
+        android:name="com.azamovhudstc.movieappforpdp.ui.screen.HomeScreen"
+        android:label="HomeScreen" >
+        <action
+            android:id="@+id/action_homeScreen_to_bookMarkScreen"
+            app:destination="@id/bookMarkScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_profileScreen"
+            app:destination="@id/profileScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreen"
+        tools:layout="@layout/home_screen"
+        android:name="com.azamovhudstc.movieappforpdp.ui.screen.MainScreen"
+        android:label="MainScreen" >
+        <action
+            android:id="@+id/action_mainScreen_to_searchScreen"
+            app:destination="@id/searchScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileScreen"
+        tools:layout="@layout/profile_screen"
+        android:name="com.azamovhudstc.movieappforpdp.ui.screen.ProfileScreen"
+        android:label="ProfileScreen" />
+    <fragment
+        android:id="@+id/bookMarkScreen"
+        tools:layout="@layout/bookmark_screen"
+        android:name="com.azamovhudstc.movieappforpdp.ui.screen.BookMarkScreen"
+        android:label="BookMarkScreen" >
+        <action
+            android:id="@+id/action_bookMarkScreen_to_movieDetailScreen"
+            app:destination="@id/movieDetailScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailScreen"
+        tools:layout="@layout/movie_detail_screen"
+        android:name="com.azamovhudstc.movieappforpdp.ui.screen.MovieDetailScreen"
+        android:label="MovieDetailScreen" >
+        <action
+            android:id="@+id/action_movieDetailScreen_to_watchVideoScreen"
+            app:destination="@id/watchVideoScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchScreen"
+        tools:layout="@layout/search_screen"
+        android:name="com.azamovhudstc.movieappforpdp.ui.screen.SearchScreen"
+        android:label="SearchScreen" />
+    <fragment
+        android:id="@+id/watchVideoScreen"
+        tools:layout="@layout/watch_video_screen"
+        android:name="com.azamovhudstc.movieappforpdp.ui.screen.WatchVideoScreen"
+        android:label="WatchVideoScreen" />
+</navigation>
